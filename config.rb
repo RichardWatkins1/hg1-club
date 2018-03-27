@@ -5,6 +5,11 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :blog do |blog|
+  # set options on blog
+  blog.paginate = true
+  blog.per_page = 10
+end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -12,6 +17,10 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+activate :livereload
+
+set :relative_links, true
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
