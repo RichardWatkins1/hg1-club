@@ -1,14 +1,12 @@
 ---
 title: "Welcome to Fizz Fridays"
-category: "Food & Drink"
+category: "Drinks Deals"
 image: "../img/blog-post-3.jpeg"
+west_park_image: "../img/west-park-eat-and-drink-bars-pubs-large.jpg"
 path: "fizz-friday.html"
-intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt."
-short_intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore."
-alt_text: "picture of a drink"
+intro: "At the end of a long working week why not start the weekend right with Fizz Friday, we've put together 3 great options to get your weekend started."
+short_intro: "At the end of a long working week why not start the weekend right with Fizz Friday, we've put together 3 great options to get your weekend started."
+alt_text: "West Park Hotel wine wall"
 date: "20 May | 2016"
 published: true
 ---
@@ -18,7 +16,6 @@ published: true
     <main class="post blog-post col-lg-8">
       <div class="container">
         <div class="post-single">
-          <div class="post-thumbnail"><img src="../img/blog-post-3.jpeg" alt="..." class="img-fluid"></div>
           <div class="post-details">
             <div class="post-meta d-flex justify-content-between">
               <div class="category">
@@ -26,17 +23,29 @@ published: true
               </div>
             </div>
             <h1><%= current_page.data.title %></h1>
+            <div class="post-thumbnail"><img src="../img/blog-post-3.jpeg" alt="..." class="img-fluid"></div>
             <div class="post-body">
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="lead">
+                At the end of a long working week why not start the weekend right with <strong>Fizz Friday</strong>, we've put
+                together 3 great options to get your weekend started.
+              </p>
+              <a href="http://thewestparkhotel.com/fizz-friday/"><h3>West Park Hotel</h3></a>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.west_park_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>Fizz Fridays at West Park Hotel is a great way to end the week, enjoy half price bottles of proseccos from 5pm.
+                All you need to do is quote ‘FIZZ FRIDAY’ at the bar.
+              </p>
+              <p><i><a href="http://thewestparkhotel.com/">West Park Hotel, West Park Hotel, 19 West Park, Harrogate, North Yorkshire, HG1 1BJ</a></i></p>
               <h3>Lorem Ipsum Dolor</h3>
-              <div class="post-thumbnail"><img src="<%= current_page.data.image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid"></div>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
               <p>div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda temporibus iusto voluptates deleniti similique rerum ducimus sint ex odio saepe. Sapiente quae pariatur ratione quis perspiciatis deleniti accusantium</p>
               <h3>Lorem Ipsum Dolor</h3>
-              <div class="post-thumbnail"><img src="<%= current_page.data.image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid"></div>
-              <p>div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda temporibus iusto voluptates deleniti similique rerum ducimus sint ex odio saepe. Sapiente quae pariatur ratione quis perspiciatis deleniti accusantium</p>
-              <h3>Lorem Ipsum Dolor</h3>
-              <div class="post-thumbnail"><img src="<%= current_page.data.image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid"></div>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
               <p>div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda temporibus iusto voluptates deleniti similique rerum ducimus sint ex odio saepe. Sapiente quae pariatur ratione quis perspiciatis deleniti accusantium</p>
             </div>
             <div class="post-tags"><a href="#" class="tag">#Business</a><a href="#" class="tag">#Tricks</a><a href="#" class="tag">#Financial</a><a href="#" class="tag">#Economy</a></div>
@@ -62,7 +71,7 @@ published: true
             <header>
               <h3 class="h6">You also might like</h3>
             </header>
-            <div class="blog-posts">
+            <div>
                 <% sitemap.resources.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
