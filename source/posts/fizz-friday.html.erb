@@ -1,0 +1,98 @@
+---
+title: "Welcome to Fizz Fridays"
+category: "Drinks Deals"
+image: "../img/champagne.jpg"
+west_park_image: "../img/west-park-eat-and-drink-bars-pubs-large.jpg"
+slug_and_lettice_image: "../img/slug-and-lettuce.jpg"
+potting_shed_bar: "../img/potting-shed-bar-logo.jpeg"
+path: "fizz-friday.html"
+intro: "At the end of a long working week why not start the weekend right with Fizz Friday, we've put together 3 great options to get your weekend started."
+short_intro: "At the end of a long working week why not start the weekend right with Fizz Friday, we've put together 3 great options to get your weekend started."
+alt_text: "West Park Hotel wine wall"
+date: "20 May | 2016"
+published: true
+---
+<div class="container">
+  <div class="row">
+    <!-- Latest Posts -->
+    <main class="post blog-post col-lg-8">
+      <div class="container">
+        <div class="post-single">
+          <div class="post-details">
+            <div class="post-meta d-flex justify-content-between">
+              <div class="category">
+                <h6><%= current_page.data.category %></h6>
+              </div>
+            </div>
+            <h1><%= current_page.data.title %></h1>
+            <div class="post-thumbnail"><img src="<%= current_page.data.image %>" alt="..." class="img-fluid"></div>
+            <div class="post-body">
+              <p class="lead">
+                At the end of a long working week why not start the weekend right with <strong>Fizz Friday</strong>, we've put
+                together 3 great options to get your weekend started.
+              </p>
+              <h3>West Park Hotel</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.west_park_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>Fizz Fridays at West Park Hotel is a great way to end the week, enjoy half price bottles of proseccos from 5pm.
+                All you need to do is quote ‘FIZZ FRIDAY’ at the bar.
+              </p>
+              <p><i><a href="http://thewestparkhotel.com/" target="_blank">West Park Hotel, 19 West Park, Harrogate, North Yorkshire, HG1 1BJ</a></i></p>
+              <h3>Slug & Lettuce</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.slug_and_lettice_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>If you need a place to kick start your weekend the the Slug & Lettuce Harrogate is the place for you, offering Gancia Dry Prosecco for only £13 per bottle & Fizz Bowl Sharers only £17.
+                Get your friends together for a long session or a cheap start to your night as this deal runs every Friday 10:00 - 22:00
+              </p>
+              <p><i><a href="https://www.slugandlettuce.co.uk/harrogate/" target="_blank">Slug and Lettuce Harrogate, 13A Montpellier Parade, Harrogate, HG1 2TJ</a></i></p>
+              <h3><i>Coming Soon</i> - The Potting Shed</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.potting_shed_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>The highly successful Potting Shed is opening a venue in Harrogate with an offer that is not to be missed.
+                Bottles of Prosecco for £15 or push the boat out for a bottle of champagne for only £20. With venues already in Bingley, Beverley,
+                NorthAllerton and Guiseley when the Harrogate bar opens this offer is definitely one for the diary.
+              </p>
+              <p><i><a href="https://pottingshedbar.com/venues/harrogate" target="_blank">The Potting Shed Harrogate, Unit 3, Royal Baths, Montpellier Road, Montpellier Gardens, Harrogate, HG1 2WL</a></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="col-lg-4">
+      <!-- Widget [Search Bar Widget]-->
+      <div class="widget search">
+        <header>
+          <h3 class="h6">Search the blog</h3>
+        </header>
+        <form action="#" class="search-form">
+          <div class="form-group">
+            <input type="search" placeholder="What are you looking for?">
+            <button type="submit" class="submit"><i class="icon-search"></i></button>
+          </div>
+        </form>
+      </div>
+      <!-- Widget [Latest Posts Widget]        -->
+          <div class="widget latest-posts">
+            <header>
+              <h3 class="h6">You also might like</h3>
+            </header>
+            <div>
+                <% sitemap.resources.each do |f| %>
+                  <% if f.data.title.present? && f.data.published %>
+                    <div class="item d-flex align-items-center">
+                      <div class="image"><a href="<%= f.data.path %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      </div>
+                      <div class="title"><strong><a href="<%= f.data.path %>"><%= f.data.title %></a></strong>
+                      </div>
+                    </div>
+                    <a></a>
+                  <% end %>
+                <% end %>
+            </div>
+          </div>
+    </aside>
+  </div>
+</div>
