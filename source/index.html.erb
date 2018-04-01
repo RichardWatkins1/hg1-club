@@ -21,69 +21,30 @@
 </section>
 <section class="featured-posts no-padding-top">
   <div class="container">
-    <!-- Post-->
+    <!-- Posts-->
     <div class="row d-flex align-items-stretch">
       <div class="text col-lg-7">
         <div class="text-inner d-flex align-items-center">
           <div class="content">
             <header class="post-header">
-            <div class="category"><h6>Food & Drink</h6>
-              <a href='posts/fizz-friday.html'>
-                <h2 class="h4">Check out Fizz Friday</h2>
-              </a>
-            </header>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt.</p>
-          </div>
-        </div>
-      </div>
-      <div class="image col-lg-5"><img src="img/featured-pic-1.jpeg" alt="..."></div>
+              <div class="category">
+              <% sitemap.resources.each do |f| %>
+                <% if f.data.title.present? && f.data.category.present? && f.data.published %>
+                  <h6>
+                    <%= f.data.category %>
+                  </h6>
+                  <a href="<%=f.data.path%>">
+                    <h2 class="h4"><%= f.data.title %></h2>
+                  </a>
+                  </header>
+                  <p><%= f.data.intro %></p>
+                  </div>
+                </div>
+              </div>
+              <div class="image col-lg-5"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>"></div>
+                <% end %>
+              <% end %>
     </div>
-    <!-- Post        -->
-    <div class="row d-flex align-items-stretch">
-      <div class="image col-lg-5"><img src="img/featured-pic-2.jpeg" alt="..."></div>
-      <div class="text col-lg-7">
-        <div class="text-inner d-flex align-items-center">
-          <div class="content">
-            <header class="post-header">
-              <div class="category"><h6>Food & Drink</h6>
-              <a href="post.html">
-                <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2>
-              </a>
-            </header>
-            <p>Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Post                            -->
-    <div class="row d-flex align-items-stretch">
-      <div class="text col-lg-7">
-        <div class="text-inner d-flex align-items-center">
-          <div class="content">
-            <header class="post-header">
-              <div class="category"><h6>Food & Drink</h6>
-              <a href="post.html">
-                <h2 class="h4">Alberto Savoia Can Teach You About Interior</h2>
-              </a>
-            </header>
-            <p>Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit,
-              sed do eiusmod tempor incididunt.</p>
-          </div>
-        </div>
-      </div>
-      <div class="image col-lg-5"><img src="img/featured-pic-3.jpeg" alt="..."></div>
-    </div>
-  </div>
 </section>
 <!-- Divider Section-->
 <section style="background: url(img/divider-bg.jpg); background-size: cover; background-position: center bottom" class="divider">
@@ -102,37 +63,20 @@
       <h2>Latest from HG1</h2>
     </header>
     <div class="row">
+      <!-- Latest Post -->
       <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="post.html"><img src="img/blog-1.jpg" alt="..." class="img-fluid"></a></div>
+        <% sitemap.resources.each do |f| %>
+        <% if f.data.title.present? && f.data.title.present? && f.data.published %>
+        <div class="post-thumbnail"><a href="<%=f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
         <div class="post-details">
           <div class="post-meta d-flex justify-content-between">
-            <div class="date">20 May | 2016</div>
-            <div class="category"><a href="#">Business</a></div>
-          </div><a href="post.html">
-            <h3 class="h4">Ways to remember your important ideas</h3></a>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-        </div>
-      </div>
-      <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="post.html"><img src="img/blog-2.jpg" alt="..." class="img-fluid"></a></div>
-        <div class="post-details">
-          <div class="post-meta d-flex justify-content-between">
-            <div class="date">20 May | 2016</div>
-            <div class="category"><a href="#">Technology</a></div>
-          </div><a href="post.html">
-            <h3 class="h4">Diversity in Engineering: Effect on Questions</h3></a>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-        </div>
-      </div>
-      <div class="post col-md-4">
-        <div class="post-thumbnail"><a href="post.html"><img src="img/blog-3.jpg" alt="..." class="img-fluid"></a></div>
-        <div class="post-details">
-          <div class="post-meta d-flex justify-content-between">
-            <div class="date">20 May | 2016</div>
-            <div class="category"><a href="#">Financial</a></div>
-          </div><a href="post.html">
-            <h3 class="h4">Alberto Savoia Can Teach You About Interior</h3></a>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+            <div class="date"><%=f.data.date%></div>
+            <div class="category"><a href="#"><%=f.data.category%></a></div>
+          </div><a href="<%=f.data.path%>">
+            <h3 class="h4"><%=f.data.title%></h3></a>
+            <p class="text-muted"><%=f.data.short_intro%></p>
+        <% end %>
+        <% end %>
         </div>
       </div>
     </div>
@@ -164,19 +108,19 @@
   <div class="row">
     <div class="mix col-lg-3 col-md-3 col-sm-6">
       <div class="item"><a href="img/gallery-1.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-1.jpg" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+          <div class="overlay d-flex align-items-center justify-content-center"></div></a></div>
     </div>
     <div class="mix col-lg-3 col-md-3 col-sm-6">
       <div class="item"><a href="img/gallery-2.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-2.jpg" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+          <div class="overlay d-flex align-items-center justify-content-center"></div></a></div>
     </div>
     <div class="mix col-lg-3 col-md-3 col-sm-6">
       <div class="item"><a href="img/gallery-3.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-3.jpg" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+          <div class="overlay d-flex align-items-center justify-content-center"></div></a></div>
     </div>
     <div class="mix col-lg-3 col-md-3 col-sm-6">
       <div class="item"><a href="img/gallery-4.jpg" data-fancybox="gallery" class="image"><img src="img/gallery-4.jpg" alt="..." class="img-fluid">
-          <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
+          <div class="overlay d-flex align-items-center justify-content-center"></div></a></div>
     </div>
   </div>
 </section>
