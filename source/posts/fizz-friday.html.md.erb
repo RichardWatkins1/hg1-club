@@ -2,7 +2,7 @@
 title: "Welcome to Fizz Fridays"
 category: "Food & Drink"
 image: "../img/blog-post-3.jpeg"
-path: "posts/fizz-friday.html"
+path: "fizz-friday.html"
 intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit,
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   Ut enim ad minim veniam, quis nostrude consectetur adipisicing elit,
@@ -73,37 +73,20 @@ published: true
       <!-- Widget [Latest Posts Widget]        -->
           <div class="widget latest-posts">
             <header>
-              <h3 class="h6">Latest Posts</h3>
+              <h3 class="h6">You also might like</h3>
             </header>
-            <div class="blog-posts"><a href="#">
-                <div class="item d-flex align-items-center">
-                  <div class="image"><img src="../img/small-thumbnail-1.jpg" alt="..." class="img-fluid"></div>
-                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>
-                    <div class="d-flex align-items-center">
-                      <div class="views"><i class="icon-eye"></i> 500</div>
-                      <div class="comments"><i class="icon-comment"></i>12</div>
+            <div class="blog-posts">
+                <% sitemap.resources.each do |f| %>
+                  <% if f.data.title.present? && f.data.published %>
+                    <div class="item d-flex align-items-center">
+                      <div class="image"><a href="<%= f.data.path %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      </div>
+                      <div class="title"><strong><a href="<%= f.data.path %>"><%= f.data.title %></a></strong>
+                      </div>
                     </div>
-                  </div>
-                </div></a><a href="#">
-                <div class="item d-flex align-items-center">
-                  <div class="image"><img src="../img/small-thumbnail-2.jpg" alt="..." class="img-fluid"></div>
-                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>
-                    <div class="d-flex align-items-center">
-                      <div class="views"><i class="icon-eye"></i> 500</div>
-                      <div class="comments"><i class="icon-comment"></i>12</div>
-                    </div>
-                  </div>
-                </div></a><a href="#">
-                <div class="item d-flex align-items-center">
-                  <div class="image"><img src="../img/small-thumbnail-3.jpg" alt="..." class="img-fluid"></div>
-                  <div class="title"><strong>Alberto Savoia Can Teach You About</strong>
-                    <div class="d-flex align-items-center">
-                      <div class="views"><i class="icon-eye"></i> 500</div>
-                      <div class="comments"><i class="icon-comment"></i>12</div>
-                    </div>
-                  </div>
-                </div>
-              </a>
+                    <a></a>
+                  <% end %>
+                <% end %>
             </div>
           </div>
     </aside>
