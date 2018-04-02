@@ -22,29 +22,29 @@
 <section class="featured-posts no-padding-top">
   <div class="container">
     <!-- Posts-->
-    <div class="row d-flex align-items-stretch">
-      <div class="text col-lg-7">
-        <div class="text-inner d-flex align-items-center">
-          <div class="content">
-            <header class="post-header">
-              <div class="category">
-              <% sitemap.resources.each do |f| %>
-                <% if f.data.title.present? && f.data.category.present? && f.data.published %>
-                  <h6>
-                    <%= f.data.category %>
-                  </h6>
-                  <a href="<%="posts/"+f.data.path%>">
-                    <h2 class="h4"><%= f.data.title %></h2>
-                  </a>
-                  </header>
-                  <p><%= f.data.intro %></p>
+    <% sitemap.resources.each do |f| %>
+      <% if f.data.title.present? && f.data.category.present? && f.data.published %>
+        <div class="row d-flex align-items-stretch">
+          <div class="text col-lg-7">
+            <div class="text-inner d-flex align-items-center">
+              <div class="content">
+                <header class="post-header">
+                  <div class="category">
+                      <h6>
+                        <%= f.data.category %>
+                      </h6>
+                      <a href="<%="posts/"+f.data.path%>">
+                        <h2 class="h4"><%= f.data.title %></h2>
+                      </a>
+                      </header>
+                      <p><%= f.data.intro %></p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="image col-lg-5"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>"></div>
-                <% end %>
-              <% end %>
-    </div>
+                <div class="image col-lg-5"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>"></div>
+            </div>
+      <% end %>
+    <% end %>
 </section>
 <!-- Divider Section-->
 <section style="background: url(img/harrogate-street.jpg); background-size: cover; background-position: center" class="divider">
@@ -63,22 +63,21 @@
       <h2>Latest from HG1</h2>
     </header>
     <div class="row">
-      <!-- Latest Post -->
-      <div class="post col-md-4">
-        <% sitemap.resources.each do |f| %>
-        <% if f.data.title.present? && f.data.title.present? && f.data.published %>
-        <div class="post-thumbnail"><a href="<%="posts/"+f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
-        <div class="post-details">
-          <div class="post-meta d-flex justify-content-between">
-            <div class="date"><%=f.data.date%></div>
-            <div class="category"><a href="#"><%=f.data.category%></a></div>
-          </div><a href="<%="posts/"+f.data.path%>">
-            <h3 class="h4"><%=f.data.title%></h3></a>
-            <p class="text-muted"><%=f.data.short_intro%></p>
-        <% end %>
-        <% end %>
-        </div>
-      </div>
+    <% sitemap.resources.each do |f| %>
+      <% if f.data.title.present? && f.data.title.present? && f.data.published %>
+          <div class="post col-md-4">
+            <div class="post-thumbnail"><a href="<%="posts/"+f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
+            <div class="post-details">
+              <div class="post-meta d-flex justify-content-between">
+                <div class="date"><%=f.data.date%></div>
+                <div class="category"><a href="#"><%=f.data.category%></a></div>
+              </div><a href="<%="posts/"+f.data.path%>">
+                <h3 class="h4"><%=f.data.title%></h3></a>
+                <p class="text-muted"><%=f.data.short_intro%></p>
+            </div>
+          </div>
+          <% end %>
+          <% end %>
     </div>
   </div>
 </section>
