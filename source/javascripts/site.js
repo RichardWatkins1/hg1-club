@@ -1,5 +1,5 @@
 // This is where it all goes :)
-$("#my-form").submit(function (e) {
+$("#js-submit").submit(function (e) {
   e.preventDefault()
 
   var $form = $(this);
