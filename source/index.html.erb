@@ -22,7 +22,7 @@
 <section class="featured-posts no-padding-top">
   <div class="container">
     <!-- Posts-->
-    <% sitemap.resources.each do |f| %>
+      <% sitemap.resources.each do |f| %>
       <% if f.data.title.present? && f.data.category.present? && f.data.published %>
         <div class="row d-flex align-items-stretch">
           <div class="text col-lg-7">
@@ -38,6 +38,10 @@
                       </a>
                       </header>
                       <p><%= f.data.intro %></p>
+                      <footer class="post-footer d-flex align-items-center"><a href="#" class="author d-flex align-items-center flex-wrap">
+                        <div class="title"><span></span></div></a>
+                        <div class="date"><i class="icon-clock"></i><%= f.data.date %></div>
+                      </footer>
                       </div>
                     </div>
                   </div>
