@@ -48,9 +48,9 @@ set :relative_links, true
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
+activate :gzip
 
 configure :build do
-  activate :gzip
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
