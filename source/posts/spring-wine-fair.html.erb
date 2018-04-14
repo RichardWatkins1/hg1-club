@@ -63,12 +63,12 @@ modified_on: 2018-04-14
               <h3 class="h6">You also might like</h3>
             </header>
             <div>
-                <% sitemap.resources.each do |f| %>
+                <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
-                      <div class="title"><strong><a href="<%= f.data.path %>"><%= f.data.title %></a></strong>
+                      <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>
                     </div>
                     <a></a>
