@@ -7,3 +7,4 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'middleman-livereload'
 gem "middleman-blog", "~> 4.0"
 gem "middleman-minify-html"
+gem "builder"
