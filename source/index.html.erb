@@ -1,5 +1,5 @@
 <!-- Hero Section-->
-<section style="background: url(img/harrogate-black-and-white.jpg); background-size: cover; background-position: center center" class="hero">
+<section style="background: url(img/harrogate-black-and-white-min.jpg); background-size: cover; background-position: center center" class="hero">
   <div class="container">
     <div class="row">
       <div class="col-lg-7">
@@ -22,8 +22,8 @@
 <section class="featured-posts no-padding-top">
   <div class="container">
     <!-- Posts-->
-      <% sitemap.resources.each do |f| %>
-      <% if f.data.title.present? && f.data.category.present? && f.data.published %>
+      <% all_posts.each do |f| %>
+      <% if f.data.published %>
         <div class="row d-flex align-items-stretch">
           <div class="text col-lg-7">
             <div class="text-inner d-flex align-items-center">
@@ -33,7 +33,7 @@
                       <h6>
                         <%= f.data.category %>
                       </h6>
-                      <a href="<%="posts/"+f.data.path%>">
+                      <a href="<%=f.data.path%>">
                         <h2 class="h4"><%= f.data.title %></h2>
                       </a>
                       </header>
@@ -51,11 +51,11 @@
     <% end %>
 </section>
 <!-- Divider Section-->
-<section style="background: url(img/harrogate-street-image.jpg); background-size: cover; background-position: center" class="divider">
+<section style="background: url(img/harrogate-street-image-min.jpg); background-size: cover; background-position: center" class="divider">
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h2><strong>The HG1 Club</strong> aims to provide all the information you'll ever need in order enjoy your time in Harrogate, whether for a day, month or years.</h2>
+        <h2><strong>The HG1 Club</strong> aims to provide all the information you'll ever need in order enjoy your time in Harrogate.</h2>
       </div>
     </div>
   </div>
@@ -67,15 +67,15 @@
       <h2>Latest from HG1</h2>
     </header>
     <div class="row">
-    <% sitemap.resources.each do |f| %>
-      <% if f.data.title.present? && f.data.title.present? && f.data.published %>
+    <% all_posts.each do |f| %>
+      <% if f.data.published %>
           <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="<%="posts/"+f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
+            <div class="post-thumbnail"><a href="<%=f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
             <div class="post-details">
               <div class="post-meta d-flex justify-content-between">
                 <div class="date"><%=f.data.date%></div>
                 <div class="category"><a href="#"><%=f.data.category%></a></div>
-              </div><a href="<%="posts/"+f.data.path%>">
+              </div><a href="<%=f.data.path%>">
                 <h3 class="h4"><%=f.data.title%></h3></a>
                 <p class="text-muted"><%=f.data.short_intro%></p>
             </div>
