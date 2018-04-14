@@ -22,7 +22,7 @@
 <section class="featured-posts no-padding-top">
   <div class="container">
     <!-- Posts-->
-      <% sitemap.resources.each do |f| %>
+      <% all_posts.each do |f| %>
       <% if f.data.published %>
         <div class="row d-flex align-items-stretch">
           <div class="text col-lg-7">
@@ -67,8 +67,8 @@
       <h2>Latest from HG1</h2>
     </header>
     <div class="row">
-    <% sitemap.resources.each do |f| %>
-      <% if f.data.title.present? && f.data.title.present? && f.data.published %>
+    <% all_posts.each do |f| %>
+      <% if f.data.published %>
           <div class="post col-md-4">
             <div class="post-thumbnail"><a href="<%=f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
             <div class="post-details">

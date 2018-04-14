@@ -55,3 +55,24 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
 end
+
+helpers do
+
+  def canonical_url(append_path = current_page.path)
+    path = append_path == "index.html" ? "" : append_path.sub(/^\//, "")
+    "https://hg1.club/#{path}"
+  end
+
+  def all_posts
+    sitemap.resources.select do |page|
+      page.data.published_on &&  page.path.include?("posts") && page.path.include?("html")
+    end.sort do |a,b|
+      parse_date(a.data.modified_on || a.data.published_on) <=>
+      parse_date(b.data.modified_on || b.data.published_on)
+    end.reverse
+  end
+
+  def parse_date(date)
+    date.respond_to?(:strftime) ? date : DateTime.parse(date)
+  end
+end
