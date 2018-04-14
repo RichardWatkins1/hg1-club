@@ -1,0 +1,79 @@
+---
+title: "Spring Wine Fair at Hotel du Vin"
+category: "Upcoming Events"
+image: "../img/spring-wine-fair.jpg"
+hotel_du_vin: "../img/hotel-du-vin.jpg"
+path: "posts/spring-wine-fair.html"
+intro: "If you're a wine lover we've got you covered with the A&H String Wine Fair at Hotel du Vin."
+short_intro: "If you're a wine lover we've got you covered with the A&H String Wine Fair at Hotel du Vin."
+alt_text: "Hotel du vin image"
+date: "28th | April | 2018"
+published: true
+---
+<div class="container">
+  <div class="row">
+    <!-- Latest Posts -->
+    <main class="post blog-post col-lg-8">
+      <div class="container">
+        <div class="post-single">
+          <div class="post-details">
+            <div class="post-meta d-flex justify-content-between">
+              <div class="category">
+                <h6><%= current_page.data.category %></h6>
+              </div>
+            </div>
+            <h1><%= current_page.data.title %></h1>
+            <div class="post-thumbnail">
+              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="post-body">
+              <p class="lead">
+                If you love wine then the <strong>A & H Spring Wine Fair</strong> at Hotel du Vin is for you!
+                The Spring wine fair is where quality meets value, you'll have the chance to try over 50 wines (that's right <strong>50 WINES</strong>).
+                The event takes place on <strong>Saturday 28th April</strong>. Book in for one of 2 sessions, the lunchtime session
+                 <strong>12 - 2pm</strong> and the afternoon session <strong>3 - 5pm</strong>. Tickets are only £10 each
+                 or two for £15. You'll need to book tickets in advance, you can do that <a href="http://www.akeandhumphris.co.uk/Default.aspx" target="_blank">here</a>.
+                 <br>
+                 As if this wasn't even <a class="a-link" href="http://www.akeandhumphris.co.uk" target="_blank">Ake and Humphris</a> will lauching the latest edition of their own gin, rum and beer!
+              </p>
+              <h3>Hotel du Vin</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.hotel_du_vin %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Enjoy the Spring Wine Fair in the luxury surroundings of one of Harrogate's top hotels. Sit back relax and enjoy copious amounts of wine
+                from one of the top retailers in the area.
+              </p>
+              <p><i><a href="https://www.hotelduvin.com/locations/harrogate/" target="_blank">Hotel du Vin, Prospect Place, Harrogate, HG1 1LB</a></i></p>
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="col-lg-4">
+      <!-- Widget [Search Bar Widget]-->
+
+      <!-- Widget [Latest Posts Widget]        -->
+          <div class="widget latest-posts">
+            <header>
+              <h3 class="h6">You also might like</h3>
+            </header>
+            <div>
+                <% sitemap.resources.each do |f| %>
+                  <% if f.data.title.present? && f.data.published %>
+                    <div class="item d-flex align-items-center">
+                      <div class="image"><a href="<%= f.data.path %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      </div>
+                      <div class="title"><strong><a href="<%= f.data.path %>"><%= f.data.title %></a></strong>
+                      </div>
+                    </div>
+                    <a></a>
+                  <% end %>
+                <% end %>
+            </div>
+          </div>
+    </aside>
+  </div>
+</div>
