@@ -6,10 +6,10 @@ activate :autoprefixer do |prefix|
 end
 
 activate :blog do |blog|
-  # set options on blog
-  blog.paginate = true
-  blog.per_page = 10
+  blog.name = "posts"
+  blog.prefix = "posts"
 end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
