@@ -837,6 +837,7 @@ section.latest-posts header {
 }
 
 .post a:hover, .post a:focus {
+  color: inherit;
   text-decoration: underline;
 }
 
@@ -1223,6 +1224,7 @@ main.posts-listing .post-footer {
 
 .widget.latest-posts a:hover {
   color: #000;
+  text-decoration: underline;
 }
 
 .widget.latest-posts .image {
