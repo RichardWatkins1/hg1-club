@@ -1,0 +1,103 @@
+---
+title: "Three top Tapas Treats"
+category: "Food"
+image: "../img/tapas.jpg"
+la_feria_image: "../img/la_feria.jpg"
+deanos_image: "../img/deanos.jpg"
+stuzzi_image: "../img/stuzzi.jpg"
+path: "posts/three-tapas-treats.html"
+intro: "We've selected a few tasty tapas treats you need to try in Harrogate."
+short_intro: "We've selected a few tasty tapas treats you need to try in Harrogate."
+date: "April | 2018"
+published_on: 2018-04-15
+modified_on: 2018-04-15
+published: true
+---
+<div class="container">
+  <div class="row">
+    <!-- Latest Posts -->
+    <main class="post blog-post col-lg-8">
+      <div class="container">
+        <div class="post-single">
+          <div class="post-details">
+            <div class="post-meta d-flex justify-content-between">
+              <div class="category">
+                <h6><%= current_page.data.category %></h6>
+              </div>
+            </div>
+            <h1><%= current_page.data.title %></h1>
+            <div class="post-thumbnail">
+              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="post-body">
+              <p class="lead">
+                Checkout this range of tapas treats from traditional to Italian. Stop in for a light bite
+                or settle in for an evening meal with friends or family. These 3 restaurants will suite any occasion.
+              </p>
+              <h3>La Feria</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.la_feria_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Nestled away at the bottom of Cold Bath Road this place is A MUST try. Not only
+                is the food truly tantalising but also the restaurant itself speaks high-level
+                Spanish Tapas vibes.
+                <strong>The HG1 Club</strong> recommends ordering between 3-4 dishes per person depending
+                on how hungry you are, rinsed down with a nice house red. Give the scrumptious
+                La Feria Ribs a try, truly mouth watering.
+              </p>
+              <p><i><a href="http://laferiarestaurants.co.uk/" target="_blank">La Feria</a>, Wellington House, Cold Bath Road, Harrogate, HG2 0NA</i></p>
+              <h3>Deano’s Graze &amp; Grill</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.deanos_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Offering a range of small home made grazing dishes to do on either date night or
+                enjoying with family or friends. Their steaks and burgers are also popular if you
+                don’t want to graze.
+                <strong>The HG1 Club</strong> Recommends trying their Early Bird for true value.
+                Early Bird 5.30-6.30 / order before 6.45.
+                Any 3 dishes for £15 or try the grazing start plus any burger for £16 or add the flat iron steak for £18.
+              </p>
+              <p><i><a href="https://grazeandgrill.co.uk/" target="_blank">Deano’s Graze &amp; Grill</a>, 34A Oxford Street, Harrogate, HG1 1PP</i></p>
+              <h3>Stuzzi</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.stuzzi_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Stuzzi which is Italian for finger food offers an Italian take on tapas. Located on Kings Road, a place offering truly authentic inspired Italian food with
+                dishes made for sharing. The portion sizes are great, you certainly won't walk away hungry. Whether you for a light bite or a relaxed evening meal <strong>Stuzzi</strong> is certainly one to try.
+              </p>
+              <p><i><a href="https://www.facebook.com/stuzziharrogate/" target="_blank">Stuzzi</a>, The Ginnel Harrogate, HG1 2RB</i></p>
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="col-lg-4">
+      <!-- Widget [Search Bar Widget]-->
+
+      <!-- Widget [Latest Posts Widget]        -->
+          <div class="widget latest-posts">
+            <header>
+              <h3 class="h6">You also might like</h3>
+            </header>
+            <div>
+                <% all_posts.each do |f| %>
+                  <% if f.data.title.present? && f.data.published %>
+                    <div class="item d-flex align-items-center">
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>"><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      </div>
+                      <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
+                      </div>
+                    </div>
+                    <a></a>
+                  <% end %>
+                <% end %>
+            </div>
+          </div>
+    </aside>
+  </div>
+</div>
