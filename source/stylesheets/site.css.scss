@@ -82,7 +82,7 @@ h1 a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: #555;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 h1:hover a {
@@ -837,7 +837,8 @@ section.latest-posts header {
 }
 
 .post a:hover, .post a:focus {
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .post h3 {
@@ -1223,6 +1224,7 @@ main.posts-listing .post-footer {
 
 .widget.latest-posts a:hover {
   color: #000;
+  text-decoration: underline;
 }
 
 .widget.latest-posts .image {
@@ -2224,12 +2226,12 @@ body {
 }
 
 a {
-  color: #999;
+  color: #3366BB;
   text-decoration: none;
 }
 
 a:focus, a:hover {
-  color: #737373;
+  color: #3366BB;
   text-decoration: underline;
 }
 

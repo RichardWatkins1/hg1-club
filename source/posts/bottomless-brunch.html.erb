@@ -47,7 +47,7 @@ published: true
                   and Bellinis
               </p>
               <p><i>(*90mins)</i></p>
-              <p><i><a href="http://foundryprojectharrogate.com/" target="_blank">Foundary Project Harrogate. 1-1A The Ginnel, Harrogate, HG1 2RB</a></i></p>
+              <p><i><a href="http://foundryprojectharrogate.com/" target="_blank">Foundary Project Harrogate</a>, 1-1A The Ginnel, Harrogate, HG1 2RB</i></p>
               <h3>All Bar One Harrogate</h3>
               <div class="post-thumbnail">
                 <img src="<%= current_page.data.all_bar_one_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
@@ -57,7 +57,7 @@ published: true
                   Unlimited* Prosecco, Mimosas, Ciroc Bloody Mary’s.
               </p>
               <p><i>(*2 hours with the last sitting at 2pm. Bookings Only.)</i></p>
-              <p><i><a href="https://www.allbarone.co.uk/national-search/yorkshire-and-the-humber/all-bar-one-harrogate/offers/bottomless-brunch" target="_blank">All Bar One Harrogate . 17-23 Parliament Street, Harrogate, HG1 2QU</a></i></p>
+              <p><i><a href="https://www.allbarone.co.uk/national-search/yorkshire-and-the-humber/all-bar-one-harrogate/offers/bottomless-brunch" target="_blank">All Bar One Harrogate</a>, 17-23 Parliament Street, Harrogate, HG1 2QU</i></p>
               <h3>The Pit Harrogate</h3>
               <div class="post-thumbnail">
                 <img src="<%= current_page.data.the_pit_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
@@ -68,7 +68,7 @@ published: true
                   Unlimited* Prosecco, Bloody Mary or Pint of Coors
               </p>
               <p>(*90mins. Pre-booking required.)</p>
-              <p><i><a href="https://arcinspirations.com/pit-harrogate/news-and-events/bottomless-lunch" target="_blank">The Pit Harrogate, The Ginnel Harrogate, HG1 2RB</a></i></p>
+              <p><i><a href="https://arcinspirations.com/pit-harrogate/news-and-events/bottomless-lunch" target="_blank">The Pit Harrogate</a>, The Ginnel Harrogate, HG1 2RB</i></p>
               <h3>Banyan Bar & Kitchen Harrogate</h3>
               <div class="post-thumbnail">
                 <img src="<%= current_page.data.banyan_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
@@ -79,7 +79,7 @@ published: true
                   Unlimited* Prosecco, Bloody Mary’s, Pint of Coors, Aperol Spritz
               </p>
               <p><i>(*90mins)</i></p>
-              <p><i><a href="https://arcinspirations.com/banyan-harrogate" target="_blank">Banyan, Harrogate 3-4 John Street, Harrogate, HG1 1JZ</a></i></p>
+              <p><i><a href="https://arcinspirations.com/banyan-harrogate" target="_blank">Banyan</a>, Harrogate 3-4 John Street, Harrogate, HG1 1JZ</i></p>
             </div>
             <div class="sharethis-inline-share-buttons"></div>
           </div>
@@ -98,7 +98,7 @@ published: true
                 <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>"><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
                       <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>
