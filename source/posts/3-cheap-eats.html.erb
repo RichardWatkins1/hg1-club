@@ -1,0 +1,104 @@
+---
+title: "3 Cheap Eats"
+category: "Food Deals"
+image: "../img/cheap-eats.jpg"
+all_bar_one: "../img/all-bar-one-harrogate-interior.jpg"
+le_bistro: "../img/bistro-pierre.jpg"
+quantro: "../img/quantro.jpg"
+path: "posts/3-early-bird-specials.html"
+intro: "We've selected a range of cheap eats for you to enjoy throughout the week.
+Each one offering great food and excellent value. Enjoy!"
+short_intro: "We've selected a range of cheap eats for you to enjoy throughout the week.
+Each one offering great food and excellent value. Enjoy!"
+alt_text: "West Park Hotel wine wall"
+date: "April | 2018"
+published: true
+published_on: 2018-04-18
+modified_on: 2018-04-18
+---
+<div class="container">
+  <div class="row">
+    <!-- Latest Posts -->
+    <main class="post blog-post col-lg-8">
+      <div class="container">
+        <div class="post-single">
+          <div class="post-details">
+            <div class="post-meta d-flex justify-content-between">
+              <div class="category">
+                <h6><%= current_page.data.category %></h6>
+              </div>
+            </div>
+            <h1><%= current_page.data.title %></h1>
+            <div class="post-thumbnail">
+              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="post-body">
+              <p class="lead">
+                We've selected a range of cheap eats for you to enjoy throughout the week.
+                Each one offering great food and excellent value. <i>Enjoy!</i>
+              </p>
+              <h3>All Bar One</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.all_bar_one %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                <strong>Date Night or Mate Night</strong> offers a tantilising set menu of 2 courses for £10 every
+                Thursday. So you're catching up with a friend or out on a date this is a great option to start your night.
+              </p>
+              <p><i><a href="https://www.allbarone.co.uk/national-search/yorkshire-and-the-humber/all-bar-one-harrogate/set-menu" target="_blank">All Bar One Harrogate</a>, 17-23 Parliament Street, Harrogate, HG1 2QU</i></p>
+              <h3>Bistro Pierre</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.cote_brasserie %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Bistro Pierre offers exquisite French cooking in a relaxed atmosphere all at a very reasonable price.
+                To make things even better they also offer a range of money saving meals that will make your paycheck go further.
+                <br>
+                Prix fixe lunch - Exceptional value with two courses for £11.95 and three courses for £13.95.
+                <br>
+                Spring evening prix fixe - Two courses for £14.95
+                <br>
+                Dîner et vin - Two courses for £22.95 or three courses for £27.95, each served with specially chosen wine
+                <br>
+                If you're in a group then this is the restaurant for you, for parties of 8 or more Bistro Pierre offers 2/3 courses for £17.95 / £20.95.
+              </p>
+              <p><i><a href="https://bistrotpierre.co.uk/menus" target="_blank">Bistro Pierre</a>, 15 Cheltenham Parade, Harrogate HG1 1DQ</i></p>
+              <h3>Quantro Restaurant</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.quantro %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Quantro Restaurant offers an ever changing early bird menu, available Mon - Sat 12am - 2pm and 6pm - 10pm. Stop by for lunch or an evening meal and access 2/3 course for £11.50/£13.50.
+              </p>
+              <p><i><a href="https://www.quantro.co.uk/harrogate-restaurant-promotions/" target="_blank">Quantro Restaurant</a>, 3 Royal Parade, Harrogate, HG1 2SZ</i></p>
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="col-lg-4">
+      <!-- Widget [Search Bar Widget]-->
+      <!-- Widget [Latest Posts Widget]        -->
+        <div class="widget latest-posts">
+          <header>
+            <h3 class="h6">You also might like</h3>
+          </header>
+          <div>
+              <% all_posts.each do |f| %>
+                <% if f.data.title.present? && f.data.published %>
+                  <div class="item d-flex align-items-center">
+                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                    </div>
+                    <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
+                    </div>
+                  </div>
+                  <a></a>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+    </aside>
+  </div>
+</div>
