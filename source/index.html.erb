@@ -38,9 +38,6 @@
                       </a>
                       </header>
                       <p><%= f.data.intro %></p>
-                      <footer class="post-footer d-flex align-items-center">
-                        <div class="date"><%= f.data.date %></div>
-                      </footer>
                       </div>
                     </div>
                   </div>
@@ -66,7 +63,7 @@
       <h2>Latest from HG1</h2>
     </header>
     <div class="row">
-    <% all_posts.each do |f| %>
+    <% all_posts.first(3).each do |f| %>
       <% if f.data.published %>
           <div class="post col-md-4">
             <div class="post-thumbnail"><a href="<%=f.data.path%>"><img src="<%=f.data.image%>" alt="<%=f.data.alt_text%>" class="img-fluid"></a></div>
