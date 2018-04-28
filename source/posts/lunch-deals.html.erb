@@ -1,0 +1,114 @@
+---
+title: "Great Value Lunch Deals"
+category: "Food Deals"
+image: "../img/lunch-deals.jpg"
+konak_meze: "../img/konak_meze.jpg"
+guy_fawkes_arms: "../img/guy_fawkes_arms.jpg"
+timberlakes: "../img/timberlakes.jpg"
+william_and_victoria: "../img/william_and_victoria.jpeg"
+path: "posts/lunch-deals.html"
+intro: "Out for lunch a looking for a deal? We're here to help, we've put together
+a great range of restaurants with excellent lunch menus, all with great priced lunch menus. Enjoy!"
+short_intro: "Out for lunch a looking for a deal? We're here to help, we've put together
+a great range of restaurants with excellent lunch menus, all with great priced lunch menus. Enjoy!"
+alt_text: "West Park Hotel wine wall"
+date: "April | 2018"
+published: true
+published_on: 2018-04-28
+modified_on: 2018-04-28
+---
+<div class="container">
+  <div class="row">
+    <!-- Latest Posts -->
+    <main class="post blog-post col-lg-8">
+      <div class="container">
+        <div class="post-single">
+          <div class="post-details">
+            <div class="post-meta d-flex justify-content-between">
+              <div class="category">
+                <h6><%= current_page.data.category %></h6>
+              </div>
+            </div>
+            <h1><%= current_page.data.title %></h1>
+            <div class="post-thumbnail">
+              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+            <div class="post-body">
+              <p class="lead">
+                Out for lunch a looking for a deal? We're here to help, we've put together
+                a great range of restaurants with excellent lunch menus, all with great priced lunch menus. <i>Enjoy!</i>
+              </p>
+              <h3>Konak Meze</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.konak_meze %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                First up we have <strong>Konak Meze</strong> an authentic Turkish restaurant with an excellent
+                selection of dishes. They offer a great value lunch deal, 3 courses with a glass of wine for the bargain price of £9.95,
+                served Tuesday to Saturday. This is really one to checkout, it's a great price plus it's Harrogate's number 1 moderatley price restaurant on tripadvisor.
+              </p>
+              <p><i><a href="http://www.konakmeze.co.uk/" target="_blank">Konak Meze</a>, 11-13 Mount Parade, Harrogate, HG1 1BX</i></p>
+
+              <h3>The Guy Fawkes Arms</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.guy_fawkes_arms %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                This family run pub offers traditional pub food with a fine dining feel. The lunch time specials offer exceptional
+                value with 2 course £13.50 or 3 course £16.50. There is also the Sunday lunch menu which offers  2 course £17.00 or 3 course £20.00.
+                Why not make the short trip to Scotton, it'll certainly be worth it!
+              </p>
+              <p><i><a href="http://guyfawkesarms.co.uk/" target="_blank">The Guy Fawkes Arms</a>, Main Street, Scotton, Knaresborough, HG5 9HU</i></p>
+
+              <h3>Timberlake's Restaurant & Bistro</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.timberlakes %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                Located in the stylish Montpellier Quarter of Harrogate,
+                Timberlake’s Restaurant has a well-earned reputation for offering quality dishes in informal surroundings.
+                Steven Reffin recently acquired Timberlake’s;
+                a Scotsman with a passion for getting the very best from the finest locally sourced produce that Yorkshire has to offer.
+              </p>
+              <p><i><a href="https://www.timberlakesrestaurant.co.uk/" target="_blank">Timberlake's Restaurant & Bistro</a>, 1 Montpellier Mews, Harrogate, HG1 2TQ</i></p>
+
+              <h3>William & Victoria</h3>
+              <div class="post-thumbnail">
+                <img src="<%= current_page.data.william_and_victoria %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+              </div>
+              <p>
+                <strong>William & Victoria</strong> is one of the trusted Harrogate independent restaurants and offers a warm welcoming wine bar and bistro-style dining.
+                They offer a lunch set menu served Monday to Saturday 12 – 2.30pm in the downstairs Wine Bar, 2 courses £12.00 or 3 courses £16.00.
+              </p>
+              <p><i><a href="http://www.williamandvictoria.com/" target="_blank">William & Victoria</a>, 6 Cold Bath Road, Harrogate, HG2 ONA</i></p>
+            </div>
+            <div class="sharethis-inline-share-buttons"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="col-lg-4">
+      <!-- Widget [Search Bar Widget]-->
+      <!-- Widget [Latest Posts Widget]        -->
+        <div class="widget latest-posts">
+          <header>
+            <h3 class="h6">You also might like</h3>
+          </header>
+          <div>
+              <% all_posts.each do |f| %>
+                <% if f.data.title.present? && f.data.published %>
+                  <div class="item d-flex align-items-center">
+                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                    </div>
+                    <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
+                    </div>
+                  </div>
+                  <a></a>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+    </aside>
+  </div>
+</div>
