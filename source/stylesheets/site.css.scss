@@ -115,7 +115,7 @@ h1:hover a {
 }
 
 .category a {
-  color: #999;
+  color: rgb(12, 12, 12);
   letter-spacing: 0.08em;
   font-weight: 700;
   text-transform: uppercase;
@@ -676,7 +676,7 @@ section.featured-posts .row:last-of-type {
 
 section.featured-posts p {
   font-weight: 400;
-  color: #777;
+  color: rgb(7, 7, 7);
   font-size: 0.95em;
 }
 
@@ -855,7 +855,7 @@ section.latest-posts header {
 }
 
 .post .category a {
-  color: #999;
+  color: #000000;
   letter-spacing: 0.05em;
   font-weight: 700;
   text-transform: uppercase;
@@ -866,7 +866,7 @@ section.latest-posts header {
   letter-spacing: 0.05em;
   font-weight: 400;
   text-transform: uppercase;
-  color: #aaa;
+  color: #000;
 }
 
 .post .avatar {
@@ -883,7 +883,7 @@ section.latest-posts header {
 .post .comments,
 .post .views {
   font-weight: 400;
-  color: #999;
+  color: rgb(5, 0, 0);
   text-transform: capitalize;
 }
 
