@@ -28,7 +28,7 @@ modified_on: 2019-04-14
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -37,7 +37,7 @@ modified_on: 2019-04-14
               </p>
               <h3>Mojo Bar</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.mojo_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.mojo_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 A fantastic range of cocktails with a lively atmoshpere, no matter you taste in cocktails there's something on the menu for you!
@@ -45,7 +45,7 @@ modified_on: 2019-04-14
               <p><i><a href="https://mojobar.co.uk/harrogate/drink" target="_blank">Mojo Bar</a>, Parliament St, HG1 2RE</i></p>
               <h3>Revolution de Cuba</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.rev_de_cuba %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.rev_de_cuba %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 A great option for anyone who wants a lively start to their night. Enjoy two for one cocktails at <strong>Revolution de <i>Cuba</i></strong>
@@ -54,7 +54,7 @@ modified_on: 2019-04-14
               <p><i><a href="https://www.revoluciondecuba.com/bar/harrogate/" target="_blank">Revolution de Cuba</a>, 18-20 Parliament St, HG1 2RN</i></p>
               <h3>West Park Hotel</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.west_park %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.west_park %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 It’s cocktail hour from <strong>5pm – 9pm!</strong> Stop by after work for the most amazing cocktails in Harrogate – over 45 cocktails, from £4.95,  deliciously refreshing and all made by hand with the freshest ingredients at fantastic prices.
@@ -63,7 +63,7 @@ modified_on: 2019-04-14
               <p><i><a href="https://www.thewestparkhotel.com/events-offers/food-drink/" target="_blank">West Park Hotel</a>, 19 West Park, Harrogate, HG1 1BJ</i></p>
               <h3>Ivy Bar</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.ivy_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.ivy_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 As if there wasn't enough choice already for a good happy hour enjoy 2-4-1 cocktails <strong>EVERY EVENING</strong> from 5-8pm in the lively surroundings of the Ivy Bar.
@@ -87,7 +87,7 @@ modified_on: 2019-04-14
                 <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
                       <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>

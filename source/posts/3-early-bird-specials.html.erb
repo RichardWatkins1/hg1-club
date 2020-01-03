@@ -28,7 +28,7 @@ modified_on: 2018-04-15
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -38,7 +38,7 @@ modified_on: 2018-04-15
               </p>
               <h3>The Tannin Level</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.tannin_level %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.tannin_level %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 <strong>The Tannin Level</strong> has a reputation as one of Harrogate’s foremost independent restaurants and they have a great money saving early bird menu.
@@ -53,7 +53,7 @@ modified_on: 2018-04-15
               <p><i><a href="http://www.tanninlevel.co.uk/" target="_blank">The Tannin Level</a>, 5 Reglan Street, Harrogate, HG1 1LE</i></p>
               <h3>Cote Brasserie</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.cote_brasserie %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.cote_brasserie %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Côte is inspired by the brasseries of Paris, championing relaxed all-day dining and serving authentic French classics made from great quality, fresh ingredients.
@@ -67,7 +67,7 @@ modified_on: 2018-04-15
               <p><i><a href="https://www.cote.co.uk/restaurant/details/harrogate" target="_blank">Cote Brasserie</a>, 5 Albert Street, Harrogate HG1 1JU</i></p>
               <h3>Vivido</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.vivido %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.vivido %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Early Bird Special Offer:
@@ -94,7 +94,7 @@ modified_on: 2018-04-15
               <% all_posts.each do |f| %>
                 <% if f.data.title.present? && f.data.published %>
                   <div class="item d-flex align-items-center">
-                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                     </div>
                     <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                     </div>

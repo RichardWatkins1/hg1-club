@@ -30,7 +30,7 @@ modified_on: 2018-04-18
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -40,7 +40,7 @@ modified_on: 2018-04-18
               </p>
               <h3>All Bar One</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.all_bar_one %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.all_bar_one %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 <strong>Date Night or Mate Night</strong> offers a tantilising set menu of 2 courses for £10 every
@@ -49,7 +49,7 @@ modified_on: 2018-04-18
               <p><i><a href="https://www.allbarone.co.uk/national-search/yorkshire-and-the-humber/all-bar-one-harrogate/set-menu" target="_blank">All Bar One Harrogate</a>, 17-23 Parliament Street, Harrogate, HG1 2QU</i></p>
               <h3>Bistro Pierre</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.le_bistro %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.le_bistro %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Bistro Pierre offers exquisite French cooking in a relaxed atmosphere all at a very reasonable price.
@@ -66,7 +66,7 @@ modified_on: 2018-04-18
               <p><i><a href="https://bistrotpierre.co.uk/menus" target="_blank">Bistro Pierre</a>, 15 Cheltenham Parade, Harrogate HG1 1DQ</i></p>
               <h3>Quantro Restaurant</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.quantro %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.quantro %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Quantro Restaurant offers an ever changing early bird menu, available Mon - Sat 12am - 2pm and 6pm - 10pm. Stop by for lunch or an evening meal and access 2/3 course for £11.50/£13.50.
@@ -89,7 +89,7 @@ modified_on: 2018-04-18
               <% all_posts.each do |f| %>
                 <% if f.data.title.present? && f.data.published %>
                   <div class="item d-flex align-items-center">
-                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                     </div>
                     <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                     </div>

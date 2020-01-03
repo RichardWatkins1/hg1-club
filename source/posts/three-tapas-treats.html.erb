@@ -27,7 +27,7 @@ published: true
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -37,7 +37,7 @@ published: true
               </p>
               <h3>La Feria</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.la_feria_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.la_feria_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Nestled away at the bottom of Cold Bath Road this place is A MUST try. Not only
@@ -50,7 +50,7 @@ published: true
               <p><i><a href="http://laferiarestaurants.co.uk/" target="_blank">La Feria</a>, Wellington House, Cold Bath Road, Harrogate, HG2 0NA</i></p>
               <h3>Deano’s Graze &amp; Grill</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.deanos_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.deanos_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Offering a range of small home made grazing dishes to do on either date night or
@@ -63,7 +63,7 @@ published: true
               <p><i><a href="https://grazeandgrill.co.uk/" target="_blank">Deano’s Graze &amp; Grill</a>, 34A Oxford Street, Harrogate, HG1 1PP</i></p>
               <h3>Stuzzi</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.stuzzi_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.stuzzi_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Stuzzi, which is Italian for finger food, offers an Italian take on tapas. Located on Kings Road, a place offering truly authentic inspired Italian food with
@@ -88,7 +88,7 @@ published: true
                 <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>"><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>"><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
                       <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>

@@ -26,7 +26,7 @@ modified_on: 2018-04-14
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -41,7 +41,7 @@ modified_on: 2018-04-14
               </p>
               <h3>Hotel du Vin</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.hotel_du_vin %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.hotel_du_vin %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Enjoy the Spring Wine Fair in the luxury surroundings of one of Harrogate's top hotels. Sit back relax and enjoy copious amounts of wine
@@ -66,7 +66,7 @@ modified_on: 2018-04-14
                 <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
                       <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>

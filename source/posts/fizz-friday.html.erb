@@ -28,7 +28,7 @@ modified_on: 2018-03-20
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -38,7 +38,7 @@ modified_on: 2018-03-20
               </p>
               <h3>West Park Hotel</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.west_park_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.west_park_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>Fizz Fridays at West Park Hotel is a great way to end the week, enjoy half price bottles of proseccos from 5pm.
                 All you need to do is quote ‘FIZZ FRIDAY’ at the bar.
@@ -46,7 +46,7 @@ modified_on: 2018-03-20
               <p><i><a href="http://thewestparkhotel.com/" target="_blank">West Park Hotel</a>, 19 West Park, Harrogate, North Yorkshire, HG1 1BJ</i></p>
               <h3>Slug & Lettuce</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.slug_and_lettice_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.slug_and_lettice_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>If you need a place to kick start your weekend the the Slug & Lettuce Harrogate is the place for you, offering Gancia Dry Prosecco for only £13 per bottle & Fizz Bowl Sharers only £17.
                 Get your friends together for a long session or a cheap start to your night as this deal runs every Friday 10:00 - 22:00
@@ -54,7 +54,7 @@ modified_on: 2018-03-20
               <p><i><a href="https://www.slugandlettuce.co.uk/harrogate/" target="_blank">Slug and Lettuce Harrogate</a>, 13A Montpellier Parade, Harrogate, HG1 2TJ</i></p>
               <h3><i>Coming Soon</i> - The Potting Shed</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.potting_shed_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.potting_shed_bar %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>The highly successful Potting Shed is opening a venue in Harrogate with an offer that is not to be missed.
                 Bottles of Prosecco for £15 or push the boat out for a bottle of champagne for only £20. With venues already in Bingley, Beverley,
@@ -79,7 +79,7 @@ modified_on: 2018-03-20
                 <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
                       <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>

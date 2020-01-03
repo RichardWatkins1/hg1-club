@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-gem "rack", ">= 2.0.6"
-gem "ffi", ">= 1.9.24"
-gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem "rack"
+gem "ffi"
+gem 'middleman'
+gem 'middleman-autoprefixer'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'middleman-livereload'
-gem "middleman-blog", "~> 4.0"
+gem "middleman-blog"
 gem "middleman-minify-html"
 gem "builder"
