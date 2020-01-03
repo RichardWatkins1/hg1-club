@@ -29,7 +29,7 @@ published: true
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -42,7 +42,7 @@ published: true
               </p>
               <h3>Revolucion De Cuba</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.rev_de_cuba_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.rev_de_cuba_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>Bottomless Brunch every Saturday from 10am - 3pm!
                 Choose from delicious brunch dishes followed by unlimited pints of Mahou, prosecco, classic mojitos, bloody Marys, hot beverages and soft drinks for 2 hours!
@@ -50,7 +50,7 @@ published: true
               <p><i><a href="https://www.revoluciondecuba.com/bar/harrogate/" target="_blank">Revolucion De Cuba</a>, 18-20 Parliament St, Harrogate, HG1 2RN</i></p>
               <h3>Foundary Project Harrogate</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.foundry_project_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.foundry_project_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>Choose a dish from the exquisite menu and just add £15 for Unlimited* Prosecco, Mimosas
                   and Bellinis
@@ -59,7 +59,7 @@ published: true
               <p><i><a href="http://foundryprojectharrogate.com/" target="_blank">Foundary Project Harrogate</a>, 1-1A The Ginnel, Harrogate, HG1 2RB</i></p>
               <h3>All Bar One Harrogate</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.all_bar_one_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.all_bar_one_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>Choose from a selection of dishes on the menu including Eggs Benedict,
                   Buttermilk Pancakes and Handmade Beef Burgers.
@@ -69,7 +69,7 @@ published: true
               <p><i><a href="https://www.allbarone.co.uk/national-search/yorkshire-and-the-humber/all-bar-one-harrogate/offers/bottomless-brunch" target="_blank">All Bar One Harrogate</a>, 17-23 Parliament Street, Harrogate, HG1 2QU</i></p>
               <h3>The Pit Harrogate</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.the_pit_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.the_pit_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>Every Saturday and Sunday 12-3pm
                   £22.95 per person
@@ -80,7 +80,7 @@ published: true
               <p><i><a href="https://arcinspirations.com/pit-harrogate/news-and-events/bottomless-lunch" target="_blank">The Pit Harrogate</a>, The Ginnel Harrogate, HG1 2RB</i></p>
               <h3>Banyan Bar & Kitchen Harrogate</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.banyan_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.banyan_image %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>Available Saturday and Sunday 11-3pm for only £22.95 per person. Choose one dish from the Brunch Menu including Eggs benedict, Eggs royal, Full
                   English or upgrade to a deluxe option for a £5 supplement including Steak Frites,
@@ -107,7 +107,7 @@ published: true
                 <% all_posts.each do |f| %>
                   <% if f.data.title.present? && f.data.published %>
                     <div class="item d-flex align-items-center">
-                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>"><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                      <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>"><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                       </div>
                       <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                       </div>

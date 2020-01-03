@@ -31,7 +31,7 @@ modified_on: 2018-04-28
             </div>
             <h1><%= current_page.data.title %></h1>
             <div class="post-thumbnail">
-              <img src="<%= current_page.data.image %>" alt="..." class="img-fluid">
+              <img loading="lazy" src="<%= current_page.data.image %>" alt="..." class="img-fluid">
             </div>
             <div class="sharethis-inline-share-buttons"></div>
             <div class="post-body">
@@ -41,7 +41,7 @@ modified_on: 2018-04-28
               </p>
               <h3>Konak Meze</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.konak_meze %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.konak_meze %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 First up we have <strong>Konak Meze</strong> an authentic Turkish restaurant with an excellent
@@ -52,7 +52,7 @@ modified_on: 2018-04-28
 
               <h3>The Guy Fawkes Arms</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.guy_fawkes_arms %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.guy_fawkes_arms %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 This family run pub offers traditional pub food with a fine dining feel. The lunch time specials offer exceptional
@@ -63,7 +63,7 @@ modified_on: 2018-04-28
 
               <h3>Timberlake's Restaurant & Bistro</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.timberlakes %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.timberlakes %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 Located in the stylish Montpellier Quarter of Harrogate,
@@ -75,7 +75,7 @@ modified_on: 2018-04-28
 
               <h3>William & Victoria</h3>
               <div class="post-thumbnail">
-                <img src="<%= current_page.data.william_and_victoria %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
+                <img loading="lazy" src="<%= current_page.data.william_and_victoria %>" alt="<%= current_page.data.alt_text %>" class="img-fluid">
               </div>
               <p>
                 <strong>William & Victoria</strong> is one of the trusted Harrogate independent restaurants and offers a warm welcoming wine bar and bistro-style dining.
@@ -99,7 +99,7 @@ modified_on: 2018-04-28
               <% all_posts.each do |f| %>
                 <% if f.data.title.present? && f.data.published %>
                   <div class="item d-flex align-items-center">
-                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
+                    <div class="image"><a href="<%= f.data.path.gsub('posts/','') %>" ><img loading="lazy" src="<%= f.data.image %>" alt="<%= f.data.alt_text %>" class="img-fluid"></a>
                     </div>
                     <div class="title"><strong><a href="<%= f.data.path.gsub('posts/','') %>"><%= f.data.title %></a></strong>
                     </div>
