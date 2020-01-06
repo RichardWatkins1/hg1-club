@@ -12,6 +12,22 @@ Bootstrap Temple Blog Template
 * GENERAL
 * =====================
 */
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-item {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.hg1-title {
+  color: black;
+}
+
+
 .text-bold {
   font-weight: 700;
 }
@@ -48,11 +64,6 @@ span:focus {
 a i {
   -webkit-transition: none;
   transition: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 section {
@@ -2757,16 +2768,13 @@ address {
 }
 
 ol,
-ul,
 dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 ol ol,
-ul ul,
-ol ul,
-ul ol {
+ol, ol {
   margin-bottom: 0;
 }
 
